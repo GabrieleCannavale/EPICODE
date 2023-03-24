@@ -1,0 +1,107 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* HEADER */
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background-color: #192155;
+}
+
+header div.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    color: white;
+}
+
+header img.logo {
+    height: 60px;
+}
+
+ button.candidati {
+    background-color: aqua;
+    border: 1px solid;
+    border-radius: 5px;
+    border-sizing: content-box;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+header img.flag {
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* MAIN */
+
+main {
+    background-color:#192155;
+    color: white;
+}
+
+/* PRIMO BLOCCO */
+
+div.first-block {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+div.h1-text {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+}
+
+div.h1-text button.candidati {
+    width: 200px;
+}
+
+img.heroes {
+    height: 340px;
+    width: 370px;
+}
+
+/* SECONDO BLOCCO */
+
+div.second-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+div.second-block-text {
+    text-align: center;
+}
+
+div.Candidatura{
+    border: solid 4px linear-gradient(blue, purple);
+}
+
+footer {
+    height: 20vh;
+    background-color: darkorange;
+}
