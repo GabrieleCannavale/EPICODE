@@ -274,7 +274,7 @@ for (let num = 1; num <= 100; num++) {
   Scrivi un algoritmo per controllare il giorno della settimana. Usa uno switch-case sulla variabile "day", che può avere un valore da 1 a 7.
   Ad esempio, se il valore di "day" è 1, stampa in console "Lunedì"; se il valore fosse 3, in console dovrebbe comparire "Mercoledì".
 */
-
+/*
 let day = 7
 
 switch (day) {
@@ -300,4 +300,4 @@ switch (day) {
     console.log("Domenica");
     break;
 }
-
+*/
