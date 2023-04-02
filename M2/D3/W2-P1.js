@@ -262,13 +262,12 @@ for (let c = 0; c <= 15; c++) {
   Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
 
-/*
+
 for (let num = 1; num <= 100; num++) {
   let three = num % 3 === 0 ? "Fizz":"";
   let five = num % 5 === 0 ? "Buzz":"";
-  console.log(num + three + five)
+  console.log(num)
 }
-*/
 
 /* ESERCIZIO 18
   Scrivi un algoritmo per controllare il giorno della settimana. Usa uno switch-case sulla variabile "day", che può avere un valore da 1 a 7.
