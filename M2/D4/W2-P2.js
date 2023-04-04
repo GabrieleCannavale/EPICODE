@@ -95,9 +95,21 @@ console.log(numeri)
 //?ESERCIZIO 8
 //?Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), 
 //?SENZA AMMETTERE DUPLICATI.
- 
 
+/*
+let randomArr = [];
+let randomNum
+for (let i = 1; i <= 10; i++) {
+  randomNum = Math.floor(Math.random() * 11)
+  if (!randomArr.includes(randomNum) || (randomNum !== 0)) {
+    randomArr.push(randomNum)
+  } else {
+    i--;
+  }
 
+}
+console.log(randomArr)
+*/
 
 
 //? ESERCIZIO 9
@@ -273,7 +285,7 @@ for (let i = 0; i < movies.length; i++) {
     oldestYear = movies[i].Year;
     oldestOne = movies[i]
   }
-  
+
 }
 console.log(oldestOne)
 */
@@ -293,7 +305,7 @@ let moviesNames = [];
 
 for (let i = 0; i < movies.length; i++) {
   moviesNames.push(movies[i].Title);
-  
+
 }
 console.log(moviesNames)
 */
@@ -323,7 +335,7 @@ let movieFromId = [];
 for (let i = 0; i < movies.length; i++) {
   if (movies[i].imdbID === id) {
     movieFromId.push(movies[i]);
-  } 
+  }
 }
 
 console.log(movieFromId)
@@ -346,11 +358,13 @@ console.log(sum)
 //? ESERCIZIO 18
 //? Scrivi del codice per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 
+/*
 let keyWord = 'Lord';
 let keyWordMovies = [];
 for (let i = 0; i < movies.length; i++) {
   if (movies[i].Title.includes(keyWord)) {
     keyWordMovies.push(movies[i]);
-  }
-  console.log(keyWordMovies)
+  }  
 }
+console.log(keyWordMovies)
+*/
