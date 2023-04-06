@@ -1,0 +1,76 @@
+/* //!EXTRA 4
+ Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
+ Crea una funzione chiamata "maxShoppingCart" che riceve l'array shoppingCart e ritorna l'oggetto più costoso in esso contenuto.
+*/
+//*RISPOSTA 4
+/* function maxShoppingCart(array) {
+    let max = 0;
+    let maxI = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].prezzo>max) {
+            max = array[i].prezzo
+            maxI = i;        
+        }
+    }
+    return maxI;
+}
+let maxCost = (maxShoppingCart(shoppingCart));
+console.log("L'oggetto più costoso è: " + shoppingCart[maxCost].name + " con un costo di: " + shoppingCart[maxCost].prezzo + " euro") */
+
+
+
+/* //!EXTRA 5
+ Nel tuo sito e-commerce hai un array di oggetti chiamato shoppingCart. Ognuno di questi oggetti ha un prezzo, un nome, un id e la quantità da spedire.
+ Crea una funzione chiamata "latestShoppingCart" che riceve l'array shoppingCart e ritorna l'ultimo oggetto in esso contenuto.
+*/
+//*RISPOSTA 5
+/* function latestShoppingCart(array) {
+    let latest = array.length - 1;
+    return latest;
+}
+let ultimo = latestShoppingCart(shoppingCart);
+console.log("L'ultimo articolo aggiunto al carrello è: " + shoppingCart[ultimo].name) */
+
+
+
+/* //!EXTRA 6
+ Crea una funzione chiamata "loopUntil" che riceve come parametro un intero "x" compreso tra 0 e 9.
+ La funzione mostra in console un numero casuale tra 0 e 9 finchè il numero estratto è maggiore di x per 3 volte di fila.
+*/
+//* RISPOSTA 6
+/* function loopUntil(x) {
+    if (x<0 || x>9) return "Inserire un numero tra 0 e 9"
+    let random = 0;
+    for (let i = 0; i < 3;) {
+        random = Math.floor(Math.random()*10);
+        if (random>x) {
+            console.log(random);
+            i++
+        }
+    }
+}
+console.log(loopUntil(4)) */
+
+
+/* //!EXTRA 7
+ Crea una funzione chiamata "average" che riceve un array come parametro e ritorna la media aritmetica dei numeri in esso contenuti.
+ La funzione salta automaticamente qualsiasi valore non numerico all'interno dell'array.
+*/
+//*RISPOSTA 7
+/* let numbers = [1,2,1,2,1,'pollice',2];
+function average(array) {
+    let media = 0;
+    let somma = 0;
+    let counter = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] !== 'number') {
+            counter++;
+        }
+        else {
+            somma += array[i]; 
+        }       
+    }
+    media = somma / (array.length - 1);
+    return media;
+}
+console.log(average(numbers)) */
