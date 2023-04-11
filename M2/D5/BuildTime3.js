@@ -840,14 +840,24 @@ function jobFinder(location, position) {
   let jobCounter = 0
   for (let i = 0; i < jobs.length; i++) {
     let jobFilter = {}
-    if ((jobs[i].includes(location)) || (jobs[i].includes(position))) {
-      
-      rightJobs.push(jobs[i]);
+    if ((jobs[i].location.includes(location)) && (jobs[i].title.includes(position))) {
+      jobFilter.push
+      (
+        jobs[i].job_id, 
+        jobs[i].title, 
+        jobs[i].location, 
+        jobs[i].department, 
+        jobs[i].salary_range, 
+        jobs[i].employment_type, 
+        jobs[i].telecommuting, 
+        jobs[i].industry
+        );
+      rightJobs.push(jobFilter);
       jobCounter++;
     }
     
   }
-  return rightJobs + jobCounter
+  return {rightJobs, jobCounter}
 }
 
-console.log(jobFinder("York", "Manager"))
+console.log(jobFinder("US", "Manager"))
