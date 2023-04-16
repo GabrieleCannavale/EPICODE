@@ -181,7 +181,7 @@ ricerca.addEventListener("click", () => {
   ad ogni ciclo crea un paragrafo contenente il contenuto di res e lo immette nel div contenitore*/
   for (let i = 0; i < finalResult.res.length; i++) {
     let job = finalResult.res[i];
-    let jobElement = document.createElement('p'); 
+    let jobElement = document.createElement('p'); //* abbiamo creato una classe css per poter agire graficamente sulle voci del risultato
     jobElement.classList.add('job-result');
     jobElement.textContent =  job.title + '     ' + job.location;
     myContainer.appendChild(jobElement);
