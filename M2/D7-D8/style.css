@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 200px ;
+}
+
+
+h1 {
+    text-align: center;
+    color: darkred;
+    padding: 30px;
+    font-weight: bolder;
+}
+
+
+div.maxi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3.risultato-ricerca {
+    align-self: flex-start;
+    margin-left: 200px;
+    color: white;
+    background-color: darkred;
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+}
+
+.job-result {
+    border: 3px solid darkred;
+    padding: 10px;
+}

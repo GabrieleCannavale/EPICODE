@@ -126,54 +126,65 @@ const jobs = [
     location: "US, NY, Saint Bonaventure",
   },
 ]
+//! Andiamo a creare la funzione che ci servirà per cercare i lavori attraverso le parole chiave
+function cercaLavoro(doveLavoro, qualeLavoro) {
 
-function jobFilter(where, what) {         //! Abbiamo creato la funzione con gli argomenti che serviranno a stabilire località e posizione lavorativa
-  
-  let result = [];     //? questo array vuoto andrà a contenere tutti gli elementi filtrati dalla nostra ricerca e sarà il risultato della funzione
-  
-  let lowerWhere = where.toLowerCase(); //queste due variabili servono a convertire input degli argomenti in una stringhe di carattere minuscolo
-  let lowerWhat = what.toLowerCase();
-  
-  let jobCounter = 0; // questa variabile è il contatore dei lavori filtrati dalla funzione
+  //questa variabile conterrà nell'array "res" i vari lavori filtrati, e "count" ne terrà il conto
+  let risultato = {
+    res: [],
+    count: 0,
+  };
 
+  //variabili che trasformano gli argomenti della funzione in lower case, ci servirà all'interno della condizione presente nel ciclo for.
+  let doveLavoroLower = doveLavoro.toLowerCase();
+  let qualeLavoroLower = qualeLavoro.toLowerCase();
 
-  for (let i = 0; i < jobs.length; i++) { 
-
-    let lowerTitle = jobs[i].title.toLowerCase(); //queste due variabili convertono gli argomenti degli oggetti e li converono in stringhe di carattere minuscolo
-    let lowerLocation = jobs[i].location.toLowerCase();
-
-    if (lowerTitle.includes(lowerWhat) && lowerLocation.includes(lowerWhere)) {   //* questa condizione verifica se all'interno degli argomenti "title" e "location" presenti negli oggetti dell'array "jobs" sono presenti gli argomenti di input della funzione
-      result.push(jobs[i]); 
-      jobCounter += 1;
+  /*questo ciclo analizza ogni elemento presente nell'array "jobs", se le loro proprietà location e title,
+  includono rispettivamente gli attributi doveLavoro e qualeLavoro, 
+  allora aggiungiamo l'elemento in questione all'interno dell'array "res" presente in risultati*/
+  //*per avere un filtro case INSENSITIVE tutta la ricerca viene eseguita in lowercase e restituita nel case nativo.
+  for (let i = 0; i < jobs.length; i++) {
+    const lavoro = jobs[i];
+    if (lavoro.location.toLowerCase().includes(doveLavoroLower) && lavoro.title.toLowerCase().includes(qualeLavoroLower)) {
+      risultato.res.push(lavoro);
+      risultato.count++;
     }
-    
+
   }
-
-  console.log("u have " + jobCounter + " job offers");
-  return result
-
+  return risultato
 }
 
-function jobFinder() {  //!funzione che riprende la precedente, ma questa volta i valori degli argomenti vengono presi dalle inputbox del browser
+// console.log(cercaLavoro("CA", "CUST"))
 
-  let myWhere = document.getElementById("Location"); //queste due variabili prendono i valori degli input presenti in HTML
-  let myWhat = document.getElementById("Position");
+//? PARTE 2 
 
-  let ulJobs = document.createElement("ul"); //creiamo una lista non ordinata per inserire i lavori filtrati e renderli visibli all'utente
+//andiamo a salvare in due variabili il bottone di ricerca ed il contenitore presenti nell'HTML
+let ricerca = document.getElementById("bottone");
+let myContainer = document.getElementById("container");
+
+//! questo listener ci permette di "ascoltare" il bottone e far partire una arrow function ad ogni click.
+/*lo scopo della funzione è quello di far apparire nel browser il risutato della funzzione creata in precedenza,
+permettendo all'utente di sceglierne gli argomenti, per farlo utilizziamo i valori immessi nelle inputbox*/
+ricerca.addEventListener("click", () => {
+
+  //* questa linea di codice serve a cancellare il contenuto di del container ad ogni nuova ricerca (CONOSCO METODI PIU COMPLICATI E FORSE PIU CORRETTI, MA CREDO CHE UNA  SINGOLA RIGA DI CODICE SIA PIU FACILMENTE LEGGIBILE)
+  myContainer.innerHTML = '';
   
-  let outputJobs = jobFilter(myWhere.value, myWhat.value);
+  // queste due variabili riprendono i valori delle inputbox presenti in HTML
+  let doveLavoroUtente = document.getElementById("Location").value;
+  let qualeLavoroUtente = document.getElementById("Position").value;
 
-  for ( job of outputJobs) {
+  //?Creiamo una variabile che riprende la funzione della parte 1, e utilizza come argomenti le due variabili appena create
+  let finalResult = cercaLavoro(doveLavoroUtente, qualeLavoroUtente);
 
-    let liJob = document.createElement("li"); //creiamo un elemento contente la località e la posizione lavorativa, che viene aggiunto alla lista creata in precedenza
-    liJob.textContent = job.location + " " + job.title; 
-    ulJobs.appendChild(liJob);
+  /* questo ciclo for agisce su tutte le proprietà res di finalResult, 
+  ad ogni ciclo crea un paragrafo contenente il contenuto di res e lo immette nel div contenitore*/
+  for (let i = 0; i < finalResult.res.length; i++) {
+    let job = finalResult.res[i];
+    let jobElement = document.createElement('p'); 
+    jobElement.classList.add('job-result');
+    jobElement.textContent =  job.title + '     ' + job.location;
+    myContainer.appendChild(jobElement);
   }
 
-let myContainer = document.getElementById("container") //infine assegnamo alla variabile il valore del div HTML nel quale inseriamo la lista ulJobs
-myContainer.innerHTML = " " //? questa linea di codice serve a cancellare il contenuto di del container ad ogni nuova ricerca
-myContainer.appendChild(ulJobs)
-
-}
-
-
+})
