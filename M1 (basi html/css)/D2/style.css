@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+#logo{
+    width: 200px;
+
+}
+
+#sottotesto{
+   border-top-style: solid;
+   border-top-color: darkgoldenrod ;
+   background-color: beige ;
+   color:teal;
+   word-spacing: 120%;
+   padding-bottom: 20px;
+   height: 25px;
+   width: 100%
+}
+
+h1 {
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+}
+
+#image{
+    text-align: center;
+    margin:auto ;
+    border-radius: 2%;
+    box-shadow:rgba(34, 70, 136, 0.53) 10px 10px 5px;
+
+}
+
+.centro{
+    text-align: center;
+}
+
+.sally{
+    text-align: center;
+    color:lightslategray;
+    font-weight: lighter;
+    
+}
+
+main{
+    text-align: left;
+    margin: auto;
+    width: 50%;
+
+    
+
+}
+
+#extlink {
+
+    border-left-style: solid;
+    border-left-color: darkgoldenrod;
+    height: 50px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+
+    }
+
+.feature{
+    padding-top: 5px;
+    color: red;
+    margin-bottom: 0px;
+
+}
+.ingredienti {
+    border-bottom-style: solid;
+    border-bottom-color: powderblue;
+    border-bottom-width: 1px;
+}
+
+ul{
+    line-height: 40px;
+}
+
+footer {
+    text-align: left;
+    margin: auto;
+    width: 50%;
+}

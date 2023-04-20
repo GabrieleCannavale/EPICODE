@@ -1,0 +1,40 @@
+* {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+header {
+    height: 3vh;
+    background-color: #80cbc4;
+    padding: 2rem;
+}
+
+main {
+    display:flex;
+    height: 80vh;
+    justify-content: stretch;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.navigation {
+    background-color: orange;
+    width: 30%;
+}
+
+.article {
+    background-color: #ffd54e;
+    width: 50%;
+}
+
+.aside {
+    background-color: #fff276;
+    width: 20%;
+}
+
+footer {
+    background-color: #80cbc4;
+    padding: 2rem;
+    height: 3vh;
+}

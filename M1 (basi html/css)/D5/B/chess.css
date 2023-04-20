@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.scacchiera {
+  width: 720px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  margin-left: 4rem;
+  margin-top: 4rem;
+  position: relative;
+  margin-top: 0;
+  font-size: 0;
+}
+
+.container div {
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  display: inline-block;
+  position: relative;
+  margin:0;
+  font-size:1rem;
+}
+
+span {
+  position: absolute;
+}
+
+.container div:first-child>span:first-child {
+  left:-20px;
+  top: 25px;
+}
+
+.container:first-child>div:first-child>span:nth-child(2) {
+  left: 33px;;
+  top: -20px;
+}
+
+
+.container:first-child>div:nth-child(1n+2)>span:first-child {
+  left: 33px;
+  top: -20px;
+}
+
+.container:last-child>div:first-child>span:nth-child(2) {
+  left: 33px;;
+  top: 85px;
+}
+
+.container:last-child>div:nth-child(1n+2)>span:first-child {
+  left: 33px;
+  top: 85px;
+}
+
+.container div:last-child>span:last-child {
+  left: 85px;
+  top:33px;
+}
+
+
+.container:nth-child(even)>div:nth-child(odd) {
+  background-color: black;
+}
+
+.container:nth-child(odd)>div:nth-child(even) {
+  background-color: black;
+}
+
+.container:nth-child(even)>div:nth-child(even) {
+  background-color: #b09069;
+}
+
+.container:nth-child(odd)>div:nth-child(odd) {
+  background-color: #b09069;
+}
+
+.container:nth-child(1n+1)>div:hover {
+  background-color: red;
+  border-color: red;
+}
