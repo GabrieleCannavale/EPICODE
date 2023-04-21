@@ -1,0 +1,51 @@
+.jumbotron .col-md-6 .display-4{
+    color: pink;
+}
+
+.nav *{
+    color: green;
+}
+
+.jumbotron .col-md-6 .font-weight-bold{
+ color: blueviolet;   
+}
+
+.col-md-8 .blog-post:first-of-type{
+    color: green;
+}
+
+.container hr{
+    border-color:red;
+}
+
+ /* l'asterisco se ne frega del nome del figlio es:(span oppure p oppure li ecc...) e seleziona tutti indistintamente. */
+
+.nav *:nth-child(even){
+    color: red;
+}
+
+.p-4 .mb-0 a{
+    color: green;
+}
+
+.col-md-8 .blog-post:nth-child(3) .blog-post-meta a{
+    color:red;
+}
+
+.col-md-8 .blog-post:nth-child(4) li:nth-child(2){
+    color: red;
+}
+
+
+/*chiedo come mai mettendo tutte  e tre le classi non lo prende? */
+.float-right{
+    color:red;
+}
+
+.blog-pagination a:nth-child(2){
+    color: red;
+}
+
+.blog-footer .text-center a:nth-child(2){
+    color:yellow
+}
