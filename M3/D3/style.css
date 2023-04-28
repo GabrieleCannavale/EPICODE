@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(90deg, rgba(86,24,191,1) 0%, rgba(253,29,29,0.7702731605337447) 50%, rgba(252,176,69,1) 100%);
+
+}
+
+.card-control {
+    position: relative;
+    border: solid 2px black;
+}
+
+.hidden {
+    position: absolute;
+    color: black;
+    background-color: lightcyan;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.card:hover .hidden {
+    opacity: .7;
+}
