@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/c2a1535ff8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--? NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- navbar logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!--? NAVBAR LEFT SIDE -->
+                    <!-- 1st dropdown BROWSE -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- 2nd dropdown LANDING -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Landing
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- 3rd dropdown PAGES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- 4th dropdown ACCOUNT -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!--? NAVBAR RIGHT SIDE -->
+                <form class="d-flex align-center">
+
+                    <!-- 1st dropdown NOTIFICATIONS -->
+                    <div class="dropdown mx-2">
+                        <a class="dropdown-toggle-no-arrow " href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="icon-image" src="assets/notification-svg.svg" alt="">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2nd dropdown PROFILE -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle-no-arrow" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/avatar-1.jpg" alt="" class="rounded-circle icon-image">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <!--? JUMBOTRON HERO -->
+        <div class="jumbotron container-fluid text-white">
+            <div class="container">
+                <div class="row justify-content-around d-flex px-5">
+                    <div class="col-md-6 col-12 d-flex flex-column justify-content-center">
+                        <h1>Welcome Web Students!</h1>
+                        <p>Hand-picked Instructor and expertly crafted courses, designed for the modern students and
+                            entrepreneur.</p>
+                        <div class="jumbo-btn-side">
+                            <button type="button" class="btn btn-lg text-white px-3">Browse Courses</button>
+                            <button type="button" class="btn btn-light btn-lg px-3">Are You Instructor?</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <img src="assets/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--? mini JUMBOTRON -->
+        <div class="container-fluid bg-light d-flex justify-content-center">
+
+            <div class="row d-flex justify-content-center">
+
+                <!-- 1 courses -->
+                <div class="col-md-4 col-12 d-flex p-2">
+                    <img class="icon-image m-1" src="assets/cam-svg.svg" alt="">
+                    <div class="d-flex flex-column justify-content-center">
+                        <h6 class="p-0 m-0">30'000 online courses</h6>
+                        <p class="p-0 m-0">Enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+
+                <!-- 2 users -->
+                <div class="col-md-4 col-12 d-flex p-2">
+                    <img class="icon-image m-1" src="assets/users-svg.svg" alt="">
+                    <div class="d-flex flex-column justify-content-center">
+                        <h6 class="p-0 m-0">Expert instruction</h6>
+                        <p class="p-0 m-0">Find the right instructor for you</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-md-4 col-12 d-flex p-2">
+                    <img class="icon-image m-1" src="assets/clock-svg.svg" alt="">
+                    <div class="d-flex flex-column justify-content-center">
+                        <h6 class="p-0 m-0">Lifetime access</h6>
+                        <p class="p-0 m-0">Learn on your schedule</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container px-5 mt-5">
+            <h2>Recommended for you</h2>
+        </div>
+        <div class="container px-5">
+            <div class="row d-flex g-1">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/course-angular.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
