@@ -9,6 +9,7 @@
 
 body {
     background-color: #202020;
+    overflow-x: hidden;
 }
 
 /*? NAVBAR */
@@ -23,56 +24,36 @@ body {
     width: 3em;
 }
 
-/*? carousel 1 */
 
-@media (max-width: 767px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-}
+/*? FILM LIST */
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
-    }
-
-    .carousel-inner .carousel-item-start.active, 
-    .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
-    }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-    transform: translateX(0);
-}
-
-/* card del carosello */
-.card {
-    border: transparent;
-}
-
-
-/*? list 2 (watch it again) */
 
 .film-list {
     flex-wrap: nowrap;
 }
 
-  .film-list img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+
+.card {
+    border: solid 3px #202020;
+    overflow: hidden; 
+}
+
+/*! Queste proprietà vengono applicate solo al passaggio del mouse tramite script JS*/
+div.card.focus-over{
+    animation: focusOver 0.3s ease-in forwards;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: transparent;
+}  
+
+/*? animations */
+@keyframes focusOver {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+
+
+/* anche se si tratta si fare un semplice scale, 
+ho preferito giocare con un keyframe e JS
+per dimostrare quanto appreso durante il modulo3 */
