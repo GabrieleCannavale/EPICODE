@@ -28,7 +28,8 @@
       "default",
       {
         "aria-input-field-name": "off",
-        "aria-required-children": "off"
+        "aria-required-children": "off",
+        "aria-progressbar-name": "off"
       }
     ]
   }
