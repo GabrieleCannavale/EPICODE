@@ -29,3 +29,5 @@ const getAlbum = (id) => {
   getAlbum("eminem");
   getAlbum("metallica");
   getAlbum("queen");
+  
+  
