@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 body {
@@ -15,6 +13,14 @@ body {
     width: 4em;
 }
 
+
 div.card-book {
-    object-fit: cover;
+    background-color: white;
 }
+
+div.card-book img{
+    width: 100%;
+    object-fit: contain;
+
+}
+
