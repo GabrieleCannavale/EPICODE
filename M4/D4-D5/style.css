@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+#book-container img {
+    height: 350px;
+    object-fit: cover;
+}
+
+#book-container h5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+}
+
+#book-container p {
+    padding: 0 10px;
+}
